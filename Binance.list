@@ -1,8 +1,5 @@
-# Binance - Surge RULE-SET - converted from source 2026.07.22
-# Conservative optimization: only exact duplicates and DOMAIN rules fully covered by DOMAIN-SUFFIX were removed.
 DOMAIN,www.binance.click
 DOMAIN,public.nftstatic.com
-# Related Domains
 DOMAIN,m.api.forter.com
 DOMAIN,addfd325e6e3.cdn4.forter.com
 DOMAIN,crt.r2m01.amazontrust.com
@@ -60,6 +57,14 @@ DOMAIN-SUFFIX,yingwangtech.mobi
 DOMAIN-SUFFIX,yingwangtech.club
 DOMAIN-SUFFIX,yingwangtech.cc
 DOMAIN-SUFFIX,bscdnweb.com
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bybitcloud.com
+DOMAIN-SUFFIX,byffbb.com
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN-SUFFIX,bybit.kz
+DOMAIN,inapps.appsflyer.com
+DOMAIN-SUFFIX,app-measurement.com
 IP-CIDR,47.107.98.27/32
 IP-CIDR,47.107.127.135/32
 IP-CIDR,52.68.117.1/32
