@@ -1,0 +1,8 @@
+#!name=CTC02 DNS
+#!desc=ctcxianyu.com / 525536.xyz 专用 DNS
+
+[Host]
+ctcxianyu.com = server:https://38.76.213.238:8080/dns-query,https://149.104.6.147:8080/dns-query
+*.ctcxianyu.com = server:https://38.76.213.238:8080/dns-query,https://149.104.6.147:8080/dns-query
+525536.xyz = server:https://38.76.213.238:8080/dns-query,https://149.104.6.147:8080/dns-query
+*.525536.xyz = server:https://38.76.213.238:8080/dns-query,https://149.104.6.147:8080/dns-query
