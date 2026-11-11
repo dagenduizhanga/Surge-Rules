@@ -1,0 +1,35 @@
+#!name=爱阅书香 去广告 (iOS)
+#!desc=爱阅书香 6.8.5 常见广告域名拦截；Surge iOS 无法按 App 限定，会影响全设备
+#!system=ios
+
+# 根据《爱阅书香-去广告-复制即用.md》精简。仅使用 Surge iOS 有效的域名规则。
+# 原文中的 AND + PROCESS-NAME 仅适用于 Surge Mac；iOS 会忽略进程规则。
+# 未包含业务/CDN 通用域名（如 byteimg.com、bytedance.com、snssdk.com）。
+# 无需脚本、MITM 或证书。若其他 App 出现联网异常，可暂时关闭本模块排查。
+
+[Rule]
+
+# 穿山甲 / Pangle / GroMore
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,csjplatform.com,REJECT
+DOMAIN-SUFFIX,gromore.cn,REJECT
+DOMAIN-SUFFIX,gromore.com,REJECT
+DOMAIN-SUFFIX,gromore.top,REJECT
+DOMAIN-SUFFIX,pangle.io,REJECT
+DOMAIN,ad.eyoudao.oss-cn-hangzhou.aliyuncs.com,REJECT
+
+# 优量汇 / GDT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT
+DOMAIN-SUFFIX,ad.qpic.cn,REJECT
+DOMAIN-SUFFIX,adx.qq.com,REJECT
+DOMAIN-SUFFIX,adsclick.qq.com,REJECT
+
+# Google AdMob
+DOMAIN,adservice.google.com,REJECT
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,admob.com,REJECT
