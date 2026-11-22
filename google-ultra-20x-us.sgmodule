@@ -1,0 +1,14 @@
+#!name=google-ultra-20x-us
+#!desc=美区 Ultra 20x 30TB 前三个月 USD 19.99 的 SKU 只读探测。Android Play SKU 不等于 iOS 内购 SKU；本模块不修改结算或价格。
+#!system=ios
+
+# Android Google Play 研究中报道的商品：g1.ai.ultra.3months_ip_90p.acq
+# offerId=introprice；宣传为前三个计费周期 USD 19.99，之后 USD 199.99。
+# 未发现可验证的同款 iOS StoreKit SKU，因此此模块仅用于判断响应中是否存在候选标识。
+# 此脚本只输出命中类型，不记录完整网络响应、账户信息或令牌。
+
+[MITM]
+hostname = %APPEND% one.google.com
+
+[Script]
+google-ultra-20x-us-probe = type=http-response,pattern=^https://one\.google\.com/,script-path=https://raw.githubusercontent.com/dagenduizhanga/Surge-Rules/main/scripts/google-ultra-20x-us-probe.js,requires-body=true,max-size=524288
