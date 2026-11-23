@@ -1,5 +1,5 @@
 #!name=google-ultra-20x-us
-#!desc=美区 Ultra 20x 三个月 USD 19.99 SKU 响应重写（实验性，未验证成功）；与土区模块不要同时启用
+#!desc=美区 Ultra 20x 30TB 前三个月 USD 19.99 SKU 响应重写
 #!system=ios
 
 # 根据用户提供的 Shadowrocket 规则转换为 Surge iOS。
