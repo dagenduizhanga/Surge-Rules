@@ -6,5 +6,4 @@
 hostname = %APPEND% one.google.com
 
 [Body Rewrite]
-# 仅匹配 Google One /ai 响应。并非已验证的 App Store 低价订阅入口。
 http-response ^https://one\.google\.com/ai(?:\?|$) 30tb\.ai\.pro\.m 30tb.m
