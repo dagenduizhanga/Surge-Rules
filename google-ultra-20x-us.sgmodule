@@ -7,4 +7,3 @@ http-response ^https://one\.google\.com/ai\? g1\.ios\.30tb\.ai\.pro\.m g1.ai.ult
 
 [MITM]
 hostname = %APPEND% one.google.com
-h2 = true
