@@ -1,10 +1,10 @@
 #!name=google-ultra-20x-tr
-#!desc=土区 Ultra 20x 30TB 历史 SKU 实验性重写。仅用于研究；无法保证价格为 TRY 2949.99 或成功订阅。
+#!desc=土区 Ultra 20x 30TB 历史 SKU 响应重写
 #!system=ios
 
 [MITM]
 hostname = %APPEND% one.google.com
 
 [Body Rewrite]
-# 实验性：仅匹配 Google One /ai 响应。并非已验证的 App Store 低价订阅入口。
+# 仅匹配 Google One /ai 响应。并非已验证的 App Store 低价订阅入口。
 http-response ^https://one\.google\.com/ai(?:\?|$) 30tb\.ai\.pro\.m 30tb.m
