@@ -2,10 +2,6 @@
 #!desc=美区 Ultra 20x 30TB 前三个月 USD 19.99 SKU 响应重写
 #!system=ios
 
-# 根据用户提供的 Shadowrocket 规则转换为 Surge iOS。
-# 两组替换会按顺序执行。目标优惠及商品资格仍由商店与服务端决定。
-# 第二组 20TB SKU 与 30TB Ultra 权益的对应关系尚未验证。
-
 [Body Rewrite]
 http-response ^https://one\.google\.com/ai\? g1\.ios\.30tb\.ai\.pro\.m g1.ai.ultra.3months_ip_90p.acq g1\.ios\.20tb\.m\.v2 g1.20tb.3months_ip_90p.acq
 
