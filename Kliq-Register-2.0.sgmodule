@@ -1,0 +1,17 @@
+#!name=Kliq 注册解锁 v3 (DE +49 / 探测 / 响应取证)
+#!desc=① 国家列表补 Germany(+49) 并强制 AllowRegistration；② 打印并可按需改写 register-send-otp 请求（probe1-3）；③ 打印注册链路的完整响应体，用于确认服务端到底拒在哪一步
+#!system=ios
+#!author=YG
+
+[Script]
+# ① 国家列表注入（只改响应）
+kliq-country = type=http-response,pattern=^https?://[^/]+/v\d+/country/list,requires-body=1,max-size=1048576,timeout=15,script-path=https://raw.githubusercontent.com/dagenduizhanga/Surge-Rules/main/kliq-country.js
+
+# ② 注册请求：默认只记日志；argument 改成 probe1 / probe2 / probe3 才会改写请求
+kliq-register = type=http-request,pattern=^https?://[^/]+/v\d+/account/(register-send-otp|verify-otp|register-personal-account),requires-body=1,max-size=1048576,timeout=15,script-path=https://raw.githubusercontent.com/dagenduizhanga/Surge-Rules/main/kliq-register.js,argument=log
+
+# ③ 注册响应：把状态码和响应体打全（取证，不改包）
+kliq-register-resp = type=http-response,pattern=^https?://[^/]+/v\d+/account/(register-send-otp|verify-otp|register-personal-account),requires-body=1,max-size=1048576,timeout=15,script-path=https://raw.githubusercontent.com/dagenduizhanga/Surge-Rules/main/kliq-register-resp.js
+
+[MITM]
+hostname = %APPEND% *.kliq.com.tr, *.kliqapp.com
