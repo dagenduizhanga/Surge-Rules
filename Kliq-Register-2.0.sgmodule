@@ -12,6 +12,9 @@ kliq-register = type=http-request,pattern=^https?://[^/]+/v\d+/account/(register
 
 # ③ 注册响应：把状态码和响应体打全（取证，不改包）
 kliq-register-resp = type=http-response,pattern=^https?://[^/]+/v\d+/account/(register-send-otp|verify-otp|register-personal-account),requires-body=1,max-size=1048576,timeout=15,script-path=https://raw.githubusercontent.com/dagenduizhanga/Surge-Rules/main/kliq-register-resp.js
+[Rule]
+# 让 Firebase Remote Config 拉取失败 -> App 回退 LOCAL_REMOTE_CONFIG，其中 vpnControlEnabled = false
+DOMAIN,firebaseremoteconfig.googleapis.com,REJECT
 
 [MITM]
 hostname = %APPEND% *.kliq.com.tr, *.kliqapp.com
