@@ -1,5 +1,5 @@
-#!name=google-ultra-20x-us
-#!desc=美区 Ultra 20x 30TB 前三个月 USD 19.99 SKU 响应重写
+#!name=google-ultra-20x-us（1折·前3个月）
+#!desc=美区 Ultra 20x 30TB 前3个月1折（目标 USD 19.99/月）SKU 响应重写
 #!system=ios
 
 [Body Rewrite]
