@@ -1,0 +1,9 @@
+#!name=google-ultra-20x-trial
+#!desc=Google AI Ultra 20x 30TB 一个月免费试用 SKU 响应重写
+#!system=ios
+
+[Body Rewrite]
+http-response ^https://one\.google\.com/ai\? g1\.ios\.30tb\.ai\.pro\.m g1.ai.ultra.1month_eft.acq g1\.ios\.20tb\.m\.v2 g1.20tb.1month_eft.acq
+
+[MITM]
+hostname = %APPEND% one.google.com
